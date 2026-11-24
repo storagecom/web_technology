@@ -1,0 +1,722 @@
+
+<!-- ======================================= -->
+<!-- 1. HOME PAGE : home.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Store</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .top {
+            background: lightblue;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .top a {
+            margin: 15px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .left {
+            width: 20%;
+            height: 500px;
+            background: lightgray;
+            padding: 20px;
+        }
+
+        .left a {
+            display: block;
+            margin: 20px;
+        }
+
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top">
+    <h1>ABC College Book Store</h1>
+
+    <a href="home.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="registration.html">Registration</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="cart.html">Cart</a>
+</div>
+
+<div class="main">
+
+    <div class="left">
+        <h3>Branches</h3>
+
+        <a href="cse.html" target="rightFrame">CSE</a>
+        <a href="ece.html" target="rightFrame">ECE</a>
+        <a href="mech.html" target="rightFrame">MECH</a>
+        <a href="it.html" target="rightFrame">IT</a>
+    </div>
+
+    <iframe name="rightFrame" src="description.html"></iframe>
+
+</div>
+
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 2. DESCRIPTION PAGE : description.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Description</title>
+</head>
+
+<body>
+    <h1>Welcome to Online Book Store</h1>
+
+    <p>Welcome to ABC College Online Book Store.</p>
+
+    <p>Here you can find books for different branches.</p>
+
+    <p>Select your branch from the left menu.</p>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 3. LOGIN PAGE : login.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        body {
+            text-align: center;
+            background: lightblue;
+            font-family: Arial;
+        }
+
+        .box {
+            background: white;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 25px;
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Login</h2>
+
+    <form onsubmit="login(event)">
+
+        <input type="text" placeholder="Username" required><br>
+
+        <input type="password" placeholder="Password" required><br>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 4. REGISTRATION PAGE : registration.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+
+    <style>
+        body {
+            text-align: center;
+            background: lightblue;
+            font-family: Arial;
+        }
+
+        .box {
+            background: white;
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="register(event)">
+
+        <input type="text" placeholder="Name" required><br>
+
+        <input type="email" placeholder="Email" required><br>
+
+        <input type="text" placeholder="Username" required><br>
+
+        <input type="password" placeholder="Password" required><br>
+
+        <input type="text" placeholder="Phone Number" required><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 5. CSE PAGE : cse.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSE Books</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>CSE Books Catalogue</h2>
+
+<table>
+
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>C Programming</td>
+        <td>James</td>
+        <td>PHI</td>
+        <td>450</td>
+        <td>
+            <button onclick="addCart('C Programming',450)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Java Programming</td>
+        <td>Herbert</td>
+        <td>Pearson</td>
+        <td>550</td>
+        <td>
+            <button onclick="addCart('Java Programming',550)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 6. ECE PAGE : ece.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ECE Books</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>ECE Books Catalogue</h2>
+
+<table>
+
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>Electronic Devices</td>
+        <td>Millman</td>
+        <td>McGraw Hill</td>
+        <td>400</td>
+        <td>
+            <button onclick="addCart('Electronic Devices',400)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Communication Systems</td>
+        <td>Haykin</td>
+        <td>Wiley</td>
+        <td>500</td>
+        <td>
+            <button onclick="addCart('Communication Systems',500)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 7. MECH PAGE : mech.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MECH Books</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>MECH Books Catalogue</h2>
+
+<table>
+
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>Thermodynamics</td>
+        <td>R.K. Rajput</td>
+        <td>Laxmi Publications</td>
+        <td>350</td>
+        <td>
+            <button onclick="addCart('Thermodynamics',350)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Machine Design</td>
+        <td>Shigley</td>
+        <td>McGraw Hill</td>
+        <td>600</td>
+        <td>
+            <button onclick="addCart('Machine Design',600)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 8. IT PAGE : it.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Books</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background: lightpink;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>IT Books Catalogue</h2>
+
+<table>
+
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>Web Technology</td>
+        <td>Thomas</td>
+        <td>Pearson</td>
+        <td>450</td>
+        <td>
+            <button onclick="addCart('Web Technology',450)">
+                Add Cart
+            </button>
+        </td>
+    </tr>
+
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 9. CATALOGUE PAGE : catalogue.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catalogue</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>All Books Catalogue</h2>
+
+<table>
+
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+
+    <tr>
+        <td>C Programming</td>
+        <td>James</td>
+        <td>PHI</td>
+        <td>450</td>
+        <td><button onclick="addCart('C Programming',450)">Add Cart</button></td>
+    </tr>
+
+    <tr>
+        <td>Electronic Devices</td>
+        <td>Millman</td>
+        <td>McGraw Hill</td>
+        <td>400</td>
+        <td><button onclick="addCart('Electronic Devices',400)">Add Cart</button></td>
+    </tr>
+
+    <tr>
+        <td>Thermodynamics</td>
+        <td>R.K. Rajput</td>
+        <td>Laxmi</td>
+        <td>350</td>
+        <td><button onclick="addCart('Thermodynamics',350)">Add Cart</button></td>
+    </tr>
+
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 10. CART PAGE : cart.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        th {
+            background: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Shopping Cart</h2>
+
+<table>
+
+    <tr>
+        <th>Book Name</th>
+        <th>Price</th>
+    </tr>
+
+    <tbody id="cartItems"></tbody>
+
+</table>
+
+<h3 id="total"></h3>
+
+<script src="script.js"></script>
+
+<script>
+    showCart();
+</script>
+
+</body>
+</html>
+
+
+<!-- ======================================= -->
+<!-- 11. JAVASCRIPT : script.js -->
+<!-- SAVE THIS SECTION AS script.js -->
+<!-- ======================================= -->
+
+/*
+Login function
+*/
+
+function login(event) {
+    event.preventDefault();
+    alert("Login Successful");
+}
+
+/*
+Registration function
+*/
+
+function register(event) {
+    event.preventDefault();
+    alert("Registration Successful");
+}
+
+/*
+Add books to cart
+*/
+
+function addCart(name, price) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Book Added to Cart");
+}
+
+/*
+Display cart
+*/
+
+function showCart() {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let table = document.getElementById("cartItems");
+
+    let total = 0;
+
+    cart.forEach(function(book) {
+
+        let row = table.insertRow();
+
+        row.insertCell(0).innerHTML = book.name;
+
+        row.insertCell(1).innerHTML = book.price;
+
+        total = total + book.price;
+    });
+
+    document.getElementById("total").innerHTML =
+        "Total Price: Rs. " + total;
+}
